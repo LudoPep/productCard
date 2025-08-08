@@ -30,6 +30,7 @@
               "zone.js"
             ],
             "outputPath": "dist/productCard",
+            "baseHref": "./",
             "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
