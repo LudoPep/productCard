@@ -1,0 +1,25 @@
+<div class="container" [class.disabled]="isOutOfStock">
+    <div class="card">
+        <img src="assets/pomme-granny.jpg" alt="Granny Apple" />
+        <div class="product-name">
+            <h2 class="name">Apple</h2>
+            <label for="variant-select" class="variant-label">Variety :</label>
+            <select id="variant-select" [(ngModel)]="selectedVariant" class="variant-select">
+                @for (apple of apples; track apple) {
+                    <option [value]="apple">{{ apple }}</option>
+                }
+            </select>
+            <span>1.94 € / kg</span>
+            <div class="product-actions">
+                <button class="counter-btn" (click)="toDecrement()">-</button>
+                <span class="counter">{{ quantity }}</span>
+                <button class="counter-btn" (click)="toIncrement()">+</button>
+            </div>
+            <div class="cart-icon-row">
+                <button class="fa fa-shopping-cart add-to-cart" 
+                    (click)="addToCart()" 
+                    aria-label="Ajouter au panier"></button>
+            </div>
+        </div>
+    </div>
+</div>

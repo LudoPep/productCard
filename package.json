@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --base-href 'https://LudoPep.github.io/productCard/' && npx angular-cli-ghpages --dir=dist/productCard",
+    "deploy": "ng build --configuration production --base-href \"/productCard/\" && cp dist/productCard/browser/index.html dist/productCard/browser/404.html && npx angular-cli-ghpages --dir=dist/productCard/browser",
     "serve:ssr:productCard": "node dist/productCard/server/server.mjs"
   },
   "prettier": {
